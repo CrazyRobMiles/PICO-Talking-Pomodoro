@@ -7,7 +7,7 @@ Designs and software for a PICO Talking Pomodoro presented in Hackspace magazine
 ## Using the Pomodoro
 When you power up the device it says Hi and then displays "Set". Set the time by turning the rotary encoder to select the number of hours and minutes that you want the timer to run for. When you have selected the time, push in the encoder. The screen will now display "Up". 
 
-If you want the timer to count elapsed time press in the encoder. If you want to count down (and tell you how much time is left) turn the encoder until "Down" is displayed. When you have selected the required directin, push in the encoder. 
+If you want the timer to count elapsed time press in the encoder. If you want the timer to count down (and tell you how much time is left) turn the encoder until "Down" is displayed. When you have selected the required direction, push in the encoder. 
 
 Now you select the feedback that you want. You can rotate the encoder to select between "None", "Disp", "Five", "Ten" and "Rand":
 
@@ -23,7 +23,7 @@ To stop the timer early press in on the rotary control and select "Stop" from th
 
 ## Sound files
 
-The Sounds folder contains the MP3 samples used for the announcements. These must be copied onto a MicroSD card which is inserted into the DFPlayer. Note that they must be copied in order as the player ignores filenames and just uses the file position in the folder. If you copy all the files at once they may not be copied in the correct oder. The program FileCopier.py in the sounds folder can be used to copy the files one at a time into a card. 
+The Sounds folder contains the MP3 samples used for the announcements. These must be copied onto a MicroSD card which is inserted into the DFPlayer. Note that they must be copied in order as the player ignores filenames and just uses the file position in the folder directory. If you copy all the files at once they may not be copied in the correct oder. The program FileCopier.py in the sounds folder can be used to copy the files one at a time into a card. 
 
 ## Program files
 
