@@ -3,6 +3,10 @@
 Designs and software for a PICO Talking Pomodoro presented in Hackspace magazine.
 
 ![Talking Pomodoro in a box](images/timer.jpg)
+## Video
+[![YouTube Screenshot](images/video.jpg)](https://youtu.be/dRORE6ujpsI)
+
+To find out more about the device click on the image above to see a short video.
 
 ## Using the Pomodoro
 When you power up the device it says Hi and then displays "Set". Set the time by turning the rotary encoder to select the number of hours and minutes that you want the timer to run for. When you have selected the time, push in the encoder. The screen will now display "Up". 
@@ -34,9 +38,9 @@ You will need the following hardware items:
 * A rotary encoder (search for KY-040 encoder)
 * A small speaker (You can get a very nice one from Pimoroni: https://shop.pimoroni.com/products/mini-speaker-4-3w)
 * A micro-USB cable to link the PICO to the host
-Connecting wire (search for "30 AWG wire wrap") which needs a wire wrap tool (search for "wire wrap tool").
+* Connecting wire (search for "30 AWG wire wrap") which needs a wire wrap tool (search for "wire wrap tool").
 * A box. There is a 3D printable design, or you can put your timer in any box you fancy.
-Screws. You'll need some screws sized M2 4mm in length to fix things to the case (search for "laptop screws")
+* Screws. You'll need some screws sized M2 4mm in length to fix things to the case (search for "laptop screws")
 * Sticky fixer. The MP3 player does not have any fixing holes, so you must stick it inside the case using double sided tape or a “sticky fixer” pad.
 
 
