@@ -8,7 +8,7 @@ from adafruit_debouncer import Debouncer
 from DFPlayer import DFPlayer
 from adafruit_ht16k33 import segments
 
-Version = "Version 1.0"
+Version = "V2.0"
 
 class PomodoroTimer():
     
@@ -35,8 +35,7 @@ class PomodoroTimer():
         self.i2c = busio.I2C(i2c_scl, i2c_sda)
         # Make display
         self.display = segments.Seg14x4(self.i2c)
-        self.display.fill(0)
-        self.display.print('Hi  ')
+        self.display_text('Hi  ')
         # Make mp3 player
         self.uart = busio.UART(tx=play_tx, rx=play_rx)
         self.dfplayer = DFPlayer(uart=self.uart,volume=vol)
@@ -85,8 +84,12 @@ class PomodoroTimer():
                 # record the old encoder position
                 old_enc_pos = enc_pos
     
-    def display_text(self,message):
-        self.display.marquee(message,delay=0.2,loop=False)
+    def display_text(self, text):
+        self.display.fill(0)
+        self.display.print(text)
+        
+    def scroll_text(self,text):
+        self.display.marquee(text, delay=0.25, loop=False)
         
     def pick_option(self,options):
         option=0
@@ -102,11 +105,13 @@ class PomodoroTimer():
                     option=len(options)-1
                 if option>=len(options):
                     option=0
-                self.display.fill(0)
-                self.display.print(options[option])
+                self.display_text(options[option])
                 old_enc_pos = enc_pos
             self.encoder_button.update()
             if self.encoder_button.fell:
+                return option
+            self.time_button.update()
+            if self.time_button.fell:
                 return option
             
     def display_time_mins(self,mins):
@@ -116,8 +121,7 @@ class PomodoroTimer():
         
     def display_time(self,m,h):
         s=f'{h:02d}{m:02d}'
-        self.display.fill(0)
-        self.display.print(s)
+        self.display_text(s)
 
     def read_time(self,max_hours=7):
         mins=0
@@ -146,6 +150,16 @@ class PomodoroTimer():
             if self.encoder_button.fell:
                 if mins != 0 or  hours != 0:
                     break
+            self.time_button.update()
+            # has the time button been pressed
+            if self.time_button.fell:
+                if mins != 0 or  hours != 0:
+                    # if a time has been set - select it
+                    break
+                else:
+                    # display help
+                    self.scroll_text('Turn the knob to set the delay time')
+
         return mins + (hours * 60)
     
     def announce_time(self,mins):
@@ -254,13 +268,12 @@ class PomodoroTimer():
         else:
             end_sound = PomodoroTimer.TIMER_TIME_OVER
         
-        self.display.fill(0)
-        self.display.print("Done")
+        self.display_text("Done")
         self.blocking_sound_play(end_sound)
         
         
     def run(self):
-        print("Pomodoro Timer Rob Miles (www.robmiles.com)",Version)
+        print("Pomodoro Timer Rob Miles (www.robmiles.com) " + Version)
         while True:
             self.time_session()
                 

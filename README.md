@@ -9,11 +9,13 @@ Designs and software for a PICO Talking Pomodoro presented in Hackspace magazine
 To find out more about the device click on the image above to see a short video.
 
 ## Using the Pomodoro
-When you power up the device it says Hi and then displays "Set". Set the time by turning the rotary encoder to select the number of hours and minutes that you want the timer to run for. When you have selected the time, push in the encoder. The screen will now display "Up". 
+There are two controls on the Pomodoro. A knob (rotary encoder) you can turn to select settings and a big button you can press. You can also use the knob as a button by pressing it in. 
 
-If you want the timer to count elapsed time press in the encoder. If you want the timer to count down (and tell you how much time is left) turn the encoder until "Down" is displayed. When you have selected the required direction, push in the encoder. 
+When you power up the device it says Hi and then displays "Set". Set the time by turning the knob to select the number of hours and minutes that you want the timer to run for. When you have selected the time, push in the knob or press the button. The screen will now display "Up". 
 
-Now you select the feedback that you want. You can rotate the encoder to select between "None", "Disp", "Five", "Ten" and "Rand":
+If you want the timer to count elapsed time push in the knob or press the button. If you want the timer to count down (and tell you how much time is left) turn the knob until "Down" is displayed. When you have selected the required direction, push in the knob or press the button. 
+
+Now you select the feedback that you want. You can rotate the knob to select between "None", "Disp", "Five", "Ten" and "Rand":
 
 * None - the time will not be displayed. The timer will play a chime when the time completes
 * Disp - the time will be displayed but the timer will be silent.
@@ -21,7 +23,8 @@ Now you select the feedback that you want. You can rotate the encoder to select 
 * Ten - the time will be displayed and the timer will announce the time every Ten minutes. 
 * Rand - - the time will be displayed and the timer will announce the time at random intervals.
 
-To hear the time at any other point, press the button. 
+When you have selected the feedback that you want, push in the knob or press the button. The timer will display GO, which means that it is ready to run. Now press the button or push in the knob to start the clock ticking. If you have selected a display you will see it on the screen. You will also hear time announcements if you have selected them. 
+To check the time at any other point, press the button and the time will be announced and displayed, depending on what you have selected. 
 
 To stop the timer early press in on the rotary control and select "Stop" from the menu that appears. If you select "Cont" the timer will continue.
 
